@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="branco">#1E1E1E</color>
+    <color name="fundo_claro">#121212</color>
+    <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
+        <item name="android:colorPrimary">#1D9E75</item>
+        <item name="android:colorPrimaryDark">#0F6E56</item>
+        <item name="android:colorAccent">#5DCAA5</item>
+        <item name="android:windowBackground">#121212</item>
+        <item name="android:statusBarColor">#0F6E56</item>
+        <item name="android:navigationBarColor">#1A1A1A</item>
+    </style>
+</resources>
