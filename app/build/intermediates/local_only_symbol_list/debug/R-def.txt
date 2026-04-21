@@ -21,4 +21,5 @@ string app_name
 string sair_msg
 string sair_titulo
 style AppTheme
+xml file_provider_paths
 xml network_security_config

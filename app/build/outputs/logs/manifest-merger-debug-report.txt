@@ -1,218 +1,153 @@
 -- Merging decision tree log ---
+provider#androidx.core.content.FileProvider
+INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:36:9-44:20
+	android:grantUriPermissions
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:40:13-47
+	android:authorities
+		INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:38:13-60
+	android:exported
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:39:13-37
+	android:name
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:37:13-62
 manifest
-ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:2:1-32:12
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\273aad534e3fc4832a3bc3590781669e\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\325647bcc56b267234c89550169b04cc\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\e3917967b9622e6e90b56fba4bf42b43\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.activity:activity:1.6.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\1707f2cf176fe3988486f5b2881861a0\transformed\jetified-activity-1.6.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\232bb3060d972982c59fe60e4161dd19\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\06bef2c48a1388182723082ee3ca27f0\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\cd0e31776a03b70e2d22563fb2144838\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\c18aa4e6712d645d90f2edd74129037f\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\702d14a0481cc6e84239a971f0bdc7de\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\6a9264e91d0ccd23be7ae30d89a364d7\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\397c57a6f59bc563230e980d37a381ac\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\5983dc5c16340cd0fef4ae7b86c66825\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\25c31cd20ef394182bebf6bffd14d8a0\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\762497eb291fa256c893d1902ec3b4ac\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\9cd54fb0f272b3ddef4270eed4af8ac0\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\761d68ccdd62ecb8703967694e2fec50\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\f3b45a409efc9cd62f29ba84d5ea95cc\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\e796a336715a92aed9968dfcc4668a40\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\8ef40feb4a98676db7f868718f66ce5f\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\7b4565b9f79604308954a23aaf106779\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\929f9fa80841e5d7d97393a6896db7a1\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\ce160dbbfa3de34d01d231cdb832e663\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:2:1-48:12
+MERGED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\0c857eaa378e1c798341155dbc28d9bd\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\d12b07b78cc8ae25afe0f313a81c8d9e\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\3f69de462a7cb866f2ce183115fee7fd\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\10e24bd9b03dbd3ecc463abf7ec6ce3c\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\6b9bb6a8c71662ca631e197a9e065197\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\5aa68f15647158a1ef2279d74a051250\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\10e24bd9b03dbd3ecc463abf7ec6ce3c\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\2d8a610719c086ad8d2a7b81fb08630a\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
 	package
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:3:5-36
-		INJECTED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:3:5-36
+		INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:5:5-67
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:5:5-67
 	android:name
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:6:5-79
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:6:5-79
 	android:name
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:6:22-76
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:6:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:7:5-76
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:7:5-76
 	android:name
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:7:22-73
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:7:22-73
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:8:5-9:38
+	android:maxSdkVersion
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:9:9-35
+	android:name
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:8:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:10:5-11:38
+	android:maxSdkVersion
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:11:9-35
+	android:name
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:10:22-77
+uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:12:5-83
+	android:name
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:12:22-80
 application
-ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:9:5-30:19
-INJECTED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:9:5-30:19
-MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\cd0e31776a03b70e2d22563fb2144838\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\cd0e31776a03b70e2d22563fb2144838\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.core:core:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\761d68ccdd62ecb8703967694e2fec50\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
-MERGED from [androidx.core:core:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\761d68ccdd62ecb8703967694e2fec50\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\e796a336715a92aed9968dfcc4668a40\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\e796a336715a92aed9968dfcc4668a40\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\929f9fa80841e5d7d97393a6896db7a1\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\929f9fa80841e5d7d97393a6896db7a1\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:14:5-46:19
+INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:14:5-46:19
+MERGED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\0c857eaa378e1c798341155dbc28d9bd\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\0c857eaa378e1c798341155dbc28d9bd\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 	android:extractNativeLibs
-		INJECTED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\761d68ccdd62ecb8703967694e2fec50\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+		ADDED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:14:9-36
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:19:9-36
 	android:label
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:12:9-41
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:17:9-41
 	android:roundIcon
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:13:9-54
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:18:9-54
 	android:icon
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:11:9-43
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:16:9-43
 	android:allowBackup
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:15:9-35
 	android:theme
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:16:9-40
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:21:9-40
 	android:networkSecurityConfig
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:17:9-69
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:22:9-69
 	android:usesCleartextTraffic
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:15:9-45
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:20:9-45
 activity#br.com.padrao7imoveis.MainActivity
-ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:19:9-28:20
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:24:9-33:20
 	android:windowSoftInputMode
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:23:13-55
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:28:13-55
 	android:exported
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:21:13-36
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:26:13-36
 	android:configChanges
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:22:13-81
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:27:13-81
 	android:name
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:20:13-41
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:25:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:24:13-27:29
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:29:13-32:29
 action#android.intent.action.MAIN
-ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:25:17-69
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:30:17-69
 	android:name
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:25:25-66
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:30:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:26:17-77
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:31:17-77
 	android:name
-		ADDED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml:26:27-74
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:31:27-74
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:41:13-43:63
+	android:resource
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:43:17-60
+	android:name
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:42:17-67
 uses-sdk
-INJECTED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml
-INJECTED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\273aad534e3fc4832a3bc3590781669e\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\273aad534e3fc4832a3bc3590781669e\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\325647bcc56b267234c89550169b04cc\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\325647bcc56b267234c89550169b04cc\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\e3917967b9622e6e90b56fba4bf42b43\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\e3917967b9622e6e90b56fba4bf42b43\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.6.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\1707f2cf176fe3988486f5b2881861a0\transformed\jetified-activity-1.6.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.6.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\1707f2cf176fe3988486f5b2881861a0\transformed\jetified-activity-1.6.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\232bb3060d972982c59fe60e4161dd19\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\232bb3060d972982c59fe60e4161dd19\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\06bef2c48a1388182723082ee3ca27f0\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\06bef2c48a1388182723082ee3ca27f0\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\cd0e31776a03b70e2d22563fb2144838\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\cd0e31776a03b70e2d22563fb2144838\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\c18aa4e6712d645d90f2edd74129037f\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\c18aa4e6712d645d90f2edd74129037f\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\702d14a0481cc6e84239a971f0bdc7de\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\702d14a0481cc6e84239a971f0bdc7de\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\6a9264e91d0ccd23be7ae30d89a364d7\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\6a9264e91d0ccd23be7ae30d89a364d7\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\397c57a6f59bc563230e980d37a381ac\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\397c57a6f59bc563230e980d37a381ac\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\5983dc5c16340cd0fef4ae7b86c66825\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\5983dc5c16340cd0fef4ae7b86c66825\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\25c31cd20ef394182bebf6bffd14d8a0\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\25c31cd20ef394182bebf6bffd14d8a0\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\762497eb291fa256c893d1902ec3b4ac\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\762497eb291fa256c893d1902ec3b4ac\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\9cd54fb0f272b3ddef4270eed4af8ac0\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\9cd54fb0f272b3ddef4270eed4af8ac0\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\761d68ccdd62ecb8703967694e2fec50\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\761d68ccdd62ecb8703967694e2fec50\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\f3b45a409efc9cd62f29ba84d5ea95cc\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\f3b45a409efc9cd62f29ba84d5ea95cc\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\e796a336715a92aed9968dfcc4668a40\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\e796a336715a92aed9968dfcc4668a40\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\8ef40feb4a98676db7f868718f66ce5f\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\8ef40feb4a98676db7f868718f66ce5f\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\7b4565b9f79604308954a23aaf106779\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\7b4565b9f79604308954a23aaf106779\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\929f9fa80841e5d7d97393a6896db7a1\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\929f9fa80841e5d7d97393a6896db7a1\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\ce160dbbfa3de34d01d231cdb832e663\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\ce160dbbfa3de34d01d231cdb832e663\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml
+INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml
+MERGED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\0c857eaa378e1c798341155dbc28d9bd\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\0c857eaa378e1c798341155dbc28d9bd\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\d12b07b78cc8ae25afe0f313a81c8d9e\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\d12b07b78cc8ae25afe0f313a81c8d9e\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\3f69de462a7cb866f2ce183115fee7fd\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\3f69de462a7cb866f2ce183115fee7fd\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\10e24bd9b03dbd3ecc463abf7ec6ce3c\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\10e24bd9b03dbd3ecc463abf7ec6ce3c\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\6b9bb6a8c71662ca631e197a9e065197\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\6b9bb6a8c71662ca631e197a9e065197\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\5aa68f15647158a1ef2279d74a051250\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\5aa68f15647158a1ef2279d74a051250\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\10e24bd9b03dbd3ecc463abf7ec6ce3c\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\10e24bd9b03dbd3ecc463abf7ec6ce3c\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\2d8a610719c086ad8d2a7b81fb08630a\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\2d8a610719c086ad8d2a7b81fb08630a\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
 	android:targetSdkVersion
-		INJECTED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\PadraoSeteAppV2\app\src\main\AndroidManifest.xml
-provider#androidx.startup.InitializationProvider
-ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\cd0e31776a03b70e2d22563fb2144838\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\e796a336715a92aed9968dfcc4668a40\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\e796a336715a92aed9968dfcc4668a40\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\929f9fa80841e5d7d97393a6896db7a1\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\929f9fa80841e5d7d97393a6896db7a1\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
-	tools:node
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\cd0e31776a03b70e2d22563fb2144838\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:28:13-31
-	android:authorities
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\cd0e31776a03b70e2d22563fb2144838\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-	android:exported
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\cd0e31776a03b70e2d22563fb2144838\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-	android:name
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\cd0e31776a03b70e2d22563fb2144838\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-meta-data#androidx.emoji2.text.EmojiCompatInitializer
-ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\cd0e31776a03b70e2d22563fb2144838\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-	android:value
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\cd0e31776a03b70e2d22563fb2144838\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-	android:name
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\cd0e31776a03b70e2d22563fb2144838\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+		INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml
 permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\761d68ccdd62ecb8703967694e2fec50\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+ADDED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
-		ADDED from [androidx.core:core:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\761d68ccdd62ecb8703967694e2fec50\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+		ADDED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
 	android:name
-		ADDED from [androidx.core:core:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\761d68ccdd62ecb8703967694e2fec50\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
-permission#br.com.padrao7imoveis.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\761d68ccdd62ecb8703967694e2fec50\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+		ADDED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+permission#br.com.padrao7imoveis.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
-		ADDED from [androidx.core:core:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\761d68ccdd62ecb8703967694e2fec50\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+		ADDED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
 	android:name
-		ADDED from [androidx.core:core:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\761d68ccdd62ecb8703967694e2fec50\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+		ADDED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
 uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\761d68ccdd62ecb8703967694e2fec50\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+ADDED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
 	android:name
-		ADDED from [androidx.core:core:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\761d68ccdd62ecb8703967694e2fec50\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
-uses-permission#br.com.padrao7imoveis.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\761d68ccdd62ecb8703967694e2fec50\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+		ADDED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+uses-permission#br.com.padrao7imoveis.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
 	android:name
-		ADDED from [androidx.core:core:1.9.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\761d68ccdd62ecb8703967694e2fec50\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
-meta-data#androidx.lifecycle.ProcessLifecycleInitializer
-ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\e796a336715a92aed9968dfcc4668a40\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-	android:value
-		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\e796a336715a92aed9968dfcc4668a40\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\e796a336715a92aed9968dfcc4668a40\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+		ADDED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:26:22-94

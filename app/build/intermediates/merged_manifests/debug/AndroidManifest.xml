@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.padrao7imoveis.debug"
-    android:versionCode="2"
-    android:versionName="2.0.0" >
+    package="br.com.padrao7imoveis"
+    android:versionCode="3"
+    android:versionName="2.1.0" >
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -11,12 +11,19 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <permission
-        android:name="br.com.padrao7imoveis.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="br.com.padrao7imoveis.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="br.com.padrao7imoveis.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="br.com.padrao7imoveis.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
         android:allowBackup="true"
@@ -42,16 +49,15 @@
             </intent-filter>
         </activity>
 
+        <!-- FileProvider para instalar APK no Android 7+ -->
         <provider
-            android:name="androidx.startup.InitializationProvider"
-            android:authorities="br.com.padrao7imoveis.debug.androidx-startup"
-            android:exported="false" >
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="br.com.padrao7imoveis.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
             <meta-data
-                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-                android:value="androidx.startup" />
-            <meta-data
-                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-                android:value="androidx.startup" />
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
         </provider>
     </application>
 

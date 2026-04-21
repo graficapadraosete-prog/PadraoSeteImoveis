@@ -4,15 +4,15 @@
     "type": "PROCESSED_RES",
     "kind": "Directory"
   },
-  "applicationId": "br.com.padrao7imoveis.debug",
+  "applicationId": "br.com.padrao7imoveis",
   "variantName": "debug",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 2,
-      "versionName": "2.0.0",
+      "versionCode": 3,
+      "versionName": "2.1.0",
       "outputFile": "resources-debug.ap_"
     }
   ],

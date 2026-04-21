@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.padrao7imoveis.debug.test" >
+    package="br.com.padrao7imoveis.test" >
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -10,8 +10,8 @@
         android:name="android.test.InstrumentationTestRunner"
         android:functionalTest="false"
         android:handleProfiling="false"
-        android:label="Tests for br.com.padrao7imoveis.debug"
-        android:targetPackage="br.com.padrao7imoveis.debug" />
+        android:label="Tests for br.com.padrao7imoveis"
+        android:targetPackage="br.com.padrao7imoveis" />
 
     <application
         android:debuggable="true"
