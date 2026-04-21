@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace 'br.com.padrao7imoveis'
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
         applicationId "br.com.padrao7imoveis"
         minSdk 21
-        targetSdk 34
+        targetSdk 36
         versionCode 6
         versionName "3.5.0"
     }
@@ -31,6 +31,6 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.core:core:1.12.0'
-    implementation 'androidx.work:work-runtime:2.9.0'
+    implementation 'androidx.core:core:1.18.0'
+    implementation 'androidx.work:work-runtime:2.11.2'
 }

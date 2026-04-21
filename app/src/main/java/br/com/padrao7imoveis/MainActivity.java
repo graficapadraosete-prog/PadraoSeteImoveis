@@ -10,7 +10,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
+import android.net.Network;
+import android.net.NetworkCapabilities;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -33,20 +34,20 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Locale;
 
 public class MainActivity extends Activity {
 
     private WebView     webView;
     private ProgressBar progressBar;
 
-    private static final String PORTAL_URL  = "https://portal.padraosete.com.br/padraoseteimoveis/sistema/sistema.php";
-    private static final String LOGOUT_URL  = "https://portal.padraosete.com.br/padraoseteimoveis/sistema/logout.php";
-    private static final String NOTIF_URL   = "https://portal.padraosete.com.br/padraoseteimoveis/api/notificacoes-push.php";
-    private static final String CHANNEL_ID  = "padrao7_boletos";
-    private static final String PREFS_NAME  = "Padrao7Prefs";
+    private static final String PORTAL_URL = "https://portal.padraosete.com.br/padraoseteimoveis/sistema/sistema.php";
+    private static final String LOGOUT_URL = "https://portal.padraosete.com.br/padraoseteimoveis/sistema/logout.php";
+    private static final String NOTIF_URL  = "https://portal.padraosete.com.br/padraoseteimoveis/api/notificacoes-push.php";
+    private static final String CHANNEL_ID = "padrao7_boletos";
+    private static final String PREFS_NAME = "Padrao7Prefs";
 
     private final Handler uiHandler = new Handler(Looper.getMainLooper());
-    private String currentUrl = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,18 +69,19 @@ public class MainActivity extends Activity {
         // Update checker após 3s
         uiHandler.postDelayed(() -> new UpdateChecker(this).verificar(), 3000);
 
-        // Verificar notificações pendentes após 5s (primeira vez)
+        // Verificar notificações após 5s
         uiHandler.postDelayed(this::verificarNotificacoes, 5000);
     }
 
     private void configurarWebView() {
         WebSettings s = webView.getSettings();
-        s.setJavaScriptEnabled(true);
+        s.setJavaScriptEnabled(true); // Necessário para o portal funcionar
         s.setDomStorageEnabled(true);
         s.setLoadWithOverviewMode(true);
         s.setUseWideViewPort(true);
         s.setCacheMode(WebSettings.LOAD_DEFAULT);
         s.setAllowFileAccess(false);
+        s.setAllowContentAccess(false);
         s.setBuiltInZoomControls(false);
         s.setDisplayZoomControls(false);
         s.setSupportZoom(false);
@@ -96,82 +98,79 @@ public class MainActivity extends Activity {
         CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true);
 
         webView.setWebChromeClient(new WebChromeClient() {
-            @Override public void onProgressChanged(WebView v, int p) {
+            @Override
+            public void onProgressChanged(WebView v, int p) {
                 progressBar.setProgress(p);
                 progressBar.setVisibility(p < 100 ? View.VISIBLE : View.GONE);
             }
         });
 
         webView.setWebViewClient(new WebViewClient() {
-            @Override public void onPageStarted(WebView v, String url, Bitmap f) {
+            @Override
+            public void onPageStarted(WebView v, String url, Bitmap f) {
                 progressBar.setVisibility(View.VISIBLE);
-                currentUrl = url;
             }
 
-            @Override public void onPageFinished(WebView v, String url) {
+            @Override
+            public void onPageFinished(WebView v, String url) {
                 progressBar.setVisibility(View.GONE);
-                currentUrl = url;
 
-                // Injetar CSS: mostrar topbar do portal, esconder sidebar, manter bottom-nav
+                // CSS: mostrar topbar do portal, esconder sidebar, manter bottom-nav
                 String js = "javascript:(function(){" +
-                    "if(document.getElementById('app-injected')) return;" +
-                    "var style=document.createElement('style');" +
-                    "style.id='app-injected';" +
-                    "style.innerHTML=" +
-                        "'.sidebar{display:none!important}'" +
+                    "if(document.getElementById('app-injected'))return;" +
+                    "var s=document.createElement('style');" +
+                    "s.id='app-injected';" +
+                    "s.innerHTML='.sidebar{display:none!important}'" +
                         "+'.topbar{display:flex!important}'" +
                         "+'.main{margin-left:0!important;padding-top:4px!important;padding-bottom:80px!important}'" +
                         "+'.bottom-nav{display:block!important}';" +
-                    "document.head&&document.head.appendChild(style);" +
-                    // Extrair push token da sessão se disponível
-                    "var meta=document.querySelector('meta[name=push-token]');" +
-                    "if(meta)window.PushToken=meta.content;" +
+                    "document.head&&document.head.appendChild(s);" +
                     "})();";
                 v.loadUrl(js);
-                CookieManager.getInstance().flush();
 
-                // Salvar token de push se detectado na página
+                // Capturar push token da página se disponível
                 v.evaluateJavascript(
                     "(function(){var m=document.querySelector('meta[name=push-token]');return m?m.content:'';})()",
                     value -> {
                         if (value != null && !value.equals("null") && !value.equals("\"\"")) {
-                            String token = value.replace("\"","");
+                            String token = value.replace("\"", "");
                             if (!token.isEmpty()) {
-                                SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-                                prefs.edit().putString("push_token", token).apply();
+                                getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+                                    .edit().putString("push_token", token).apply();
                             }
                         }
                     }
                 );
+
+                CookieManager.getInstance().flush();
             }
 
-            @Override public boolean shouldOverrideUrlLoading(WebView v, WebResourceRequest r) {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView v, WebResourceRequest r) {
                 String url = r.getUrl().toString();
-                if (url.contains("padraosete.com.br") || url.contains("padraoseteimoveis")) {
-                    return false;
-                }
-                try { startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url))); }
-                catch (Exception e) {}
+                if (url.contains("padraosete.com.br")) return false;
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                } catch (Exception ignored) {}
                 return true;
             }
 
-            @Override public void onReceivedError(WebView v, int code, String desc, String url) {
+            @Override
+            public void onReceivedError(WebView v, int code, String desc, String url) {
                 if (!temInternet()) mostrarSemInternet();
             }
         });
     }
 
-    // ── Verificar notificações em background ─────────────────────────────────
+    // ── Notificações ─────────────────────────────────────────────────────────
     private void verificarNotificacoes() {
         new Thread(() -> {
             try {
                 SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-                String pushToken = prefs.getString("push_token", "");
-
-                // Determinar tipo (inquilino tem token, admin não)
-                String tipo = pushToken.isEmpty() ? "admin" : "inquilino";
-                String url  = NOTIF_URL + "?tipo=" + tipo +
-                              (pushToken.isEmpty() ? "" : "&token=" + pushToken);
+                String token = prefs.getString("push_token", "");
+                String tipo  = token.isEmpty() ? "admin" : "inquilino";
+                String url   = NOTIF_URL + "?tipo=" + tipo +
+                               (token.isEmpty() ? "" : "&token=" + token);
 
                 String json = buscar(url);
                 if (json == null) return;
@@ -179,37 +178,34 @@ public class MainActivity extends Activity {
                 JSONObject d = new JSONObject(json);
                 if (!d.optBoolean("notificar", false)) return;
 
-                JSONArray lista = d.optJSONArray("notificacoes");
+                if ("inquilino".equals(tipo)) {
+                    JSONArray lista = d.optJSONArray("notificacoes");
+                    if (lista == null || lista.length() == 0) return;
 
-                if (tipo.equals("inquilino") && lista != null && lista.length() > 0) {
-                    // Verificar boletos vencidos para mostrar na abertura
                     JSONObject primeiro = lista.getJSONObject(0);
                     boolean urgente = primeiro.optBoolean("urgente", false);
 
-                    // Enviar notificação push
                     enviarNotificacao(
                         primeiro.optString("titulo", "Padrão 7 Imóveis"),
                         primeiro.optString("mensagem", ""),
-                        urgente ? NotificationCompat.PRIORITY_HIGH : NotificationCompat.PRIORITY_DEFAULT
+                        urgente ? NotificationCompat.PRIORITY_HIGH
+                                : NotificationCompat.PRIORITY_DEFAULT,
+                        urgente ? 100 : 101
                     );
 
-                    // Se há boleto vencido, mostrar alerta na tela ao abrir
                     if (urgente) {
-                        String boletosInfo = montarInfoBoletos(lista);
-                        uiHandler.post(() -> mostrarAlertaBoletoVencido(boletosInfo));
+                        String info = montarInfoBoletos(lista);
+                        uiHandler.post(() -> mostrarAlertaBoletoVencido(info));
                     }
-
-                } else if (tipo.equals("admin")) {
-                    String titulo   = d.optString("titulo", "");
-                    String mensagem = d.optString("mensagem", "");
+                } else {
+                    String titulo = d.optString("titulo", "");
+                    String msg    = d.optString("mensagem", "");
                     if (!titulo.isEmpty()) {
-                        enviarNotificacao(titulo, mensagem, NotificationCompat.PRIORITY_DEFAULT);
+                        enviarNotificacao(titulo, msg,
+                            NotificationCompat.PRIORITY_DEFAULT, 200);
                     }
                 }
-
-            } catch (Exception e) {
-                // Silencioso
-            }
+            } catch (Exception ignored) {}
         }).start();
     }
 
@@ -219,22 +215,24 @@ public class MainActivity extends Activity {
             for (int i = 0; i < Math.min(lista.length(), 3); i++) {
                 JSONObject b = lista.getJSONObject(i);
                 sb.append("• ").append(b.optString("titulo", "")).append("\n")
-                  .append("  Venc. ").append(formatarData(b.optString("vencimento","")))
-                  .append(" — R$ ").append(String.format("%.2f", b.optDouble("valor",0)))
+                  .append("  Venc. ").append(formatarData(b.optString("vencimento", "")))
+                  .append(String.format(Locale.getDefault(),
+                      " — R$ %.2f", b.optDouble("valor", 0)))
                   .append("\n\n");
             }
-        } catch (Exception e) {}
+        } catch (Exception ignored) {}
         return sb.toString().trim();
     }
 
     private String formatarData(String data) {
         try {
             String[] p = data.split("-");
-            return p[2]+"/"+p[1]+"/"+p[0];
-        } catch (Exception e) { return data; }
+            return p[2] + "/" + p[1] + "/" + p[0];
+        } catch (Exception e) {
+            return data;
+        }
     }
 
-    // ── Alerta de boleto vencido ao abrir o app ──────────────────────────────
     private void mostrarAlertaBoletoVencido(String info) {
         if (isFinishing()) return;
         new AlertDialog.Builder(this)
@@ -247,14 +245,14 @@ public class MainActivity extends Activity {
             .show();
     }
 
-    // ── Enviar notificação push local ────────────────────────────────────────
-    private void enviarNotificacao(String titulo, String mensagem, int prioridade) {
+    private void enviarNotificacao(String titulo, String mensagem,
+                                    int prioridade, int notifId) {
         Intent intent = new Intent(this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         int flags = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
             ? PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT
             : PendingIntent.FLAG_UPDATE_CURRENT;
-        PendingIntent pi = PendingIntent.getActivity(this, 0, intent, flags);
+        PendingIntent pi = PendingIntent.getActivity(this, notifId, intent, flags);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
             .setSmallIcon(R.mipmap.ic_launcher)
@@ -265,29 +263,30 @@ public class MainActivity extends Activity {
             .setContentIntent(pi)
             .setAutoCancel(true);
 
+        if (prioridade == NotificationCompat.PRIORITY_HIGH) {
+            builder.setVibrate(new long[]{0, 500, 200, 500});
+        }
+
         try {
-            NotificationManagerCompat.from(this).notify((int)(System.currentTimeMillis() % 10000), builder.build());
-        } catch (SecurityException e) { /* permissão negada */ }
+            NotificationManagerCompat.from(this).notify(notifId, builder.build());
+        } catch (SecurityException ignored) {}
     }
 
-    // ── Canal de notificação (Android 8+) ────────────────────────────────────
     private void criarCanalNotificacao() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationManager nm = getSystemService(NotificationManager.class);
             if (nm != null && nm.getNotificationChannel(CHANNEL_ID) == null) {
                 NotificationChannel ch = new NotificationChannel(
-                    CHANNEL_ID,
-                    "Boletos e Ocorrências",
-                    NotificationManager.IMPORTANCE_HIGH
-                );
-                ch.setDescription("Avisos de boletos e novidades");
+                    CHANNEL_ID, "Boletos e Ocorrências",
+                    NotificationManager.IMPORTANCE_HIGH);
+                ch.setDescription("Avisos de boletos e ocorrências");
                 ch.enableVibration(true);
                 nm.createNotificationChannel(ch);
             }
         }
     }
 
-    // ── Diálogo ao pressionar Sair / Voltar ──────────────────────────────────
+    // ── Diálogo sair ─────────────────────────────────────────────────────────
     private void mostrarDialogoSair() {
         new AlertDialog.Builder(this)
             .setTitle("Padrão 7 Imóveis")
@@ -299,8 +298,7 @@ public class MainActivity extends Activity {
                 CookieManager.getInstance().removeAllCookies(null);
                 CookieManager.getInstance().flush();
                 webView.clearHistory();
-                // No app: volta para login (não para o site público)
-                webView.loadUrl(LOGOUT_URL);
+                webView.loadUrl(LOGOUT_URL); // Volta ao login no app
             })
             .show();
     }
@@ -315,19 +313,23 @@ public class MainActivity extends Activity {
         return super.onKeyDown(keyCode, event);
     }
 
-    // ── Ciclo de vida ────────────────────────────────────────────────────────
-    @Override protected void onResume() {
+    // ── Ciclo de vida ─────────────────────────────────────────────────────────
+    @Override
+    protected void onResume() {
         super.onResume();
         webView.onResume();
-        // Verificar notificações ao voltar para o app
         uiHandler.postDelayed(this::verificarNotificacoes, 1500);
     }
-    @Override protected void onPause()  {
+
+    @Override
+    protected void onPause() {
         super.onPause();
         webView.onPause();
         CookieManager.getInstance().flush();
     }
-    @Override protected void onDestroy() {
+
+    @Override
+    protected void onDestroy() {
         if (webView != null) { webView.stopLoading(); webView.destroy(); }
         super.onDestroy();
     }
@@ -339,10 +341,23 @@ public class MainActivity extends Activity {
         return mode == android.content.res.Configuration.UI_MODE_NIGHT_YES;
     }
 
+    @SuppressWarnings("deprecation")
     private boolean temInternet() {
-        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo info = cm.getActiveNetworkInfo();
-        return info != null && info.isConnected();
+        ConnectivityManager cm = (ConnectivityManager)
+            getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (cm == null) return false;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            Network net = cm.getActiveNetwork();
+            if (net == null) return false;
+            NetworkCapabilities nc = cm.getNetworkCapabilities(net);
+            return nc != null && (
+                nc.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) ||
+                nc.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) ||
+                nc.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET));
+        } else {
+            android.net.NetworkInfo info = cm.getActiveNetworkInfo();
+            return info != null && info.isConnected();
+        }
     }
 
     private String buscar(String urlStr) {
@@ -355,22 +370,26 @@ public class MainActivity extends Activity {
             conn.setReadTimeout(8000);
             conn.setRequestProperty("Cache-Control", "no-cache");
             if (conn.getResponseCode() != 200) return null;
-            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            BufferedReader br = new BufferedReader(
+                new InputStreamReader(conn.getInputStream()));
             StringBuilder sb = new StringBuilder();
             String line;
             while ((line = br.readLine()) != null) sb.append(line);
             br.close();
             return sb.toString();
-        } catch (Exception e) { return null; }
-        finally { if (conn != null) try { conn.disconnect(); } catch (Exception e) {} }
+        } catch (Exception ignored) {
+            return null;
+        } finally {
+            if (conn != null) try { conn.disconnect(); } catch (Exception ignored) {}
+        }
     }
 
     private void mostrarSemInternet() {
         boolean dark = isDarkModeOn();
-        String bg = dark ? "#1a1a1a" : "#f4f5f7";
+        String bg   = dark ? "#1a1a1a" : "#f4f5f7";
         String card = dark ? "#2d2d2d" : "#ffffff";
-        String txt = dark ? "#e5e7eb" : "#111";
-        String sub = dark ? "#9ca3af" : "#6b7280";
+        String txt  = dark ? "#e5e7eb" : "#111";
+        String sub  = dark ? "#9ca3af" : "#6b7280";
         webView.loadData(
             "<!DOCTYPE html><html><head><meta charset='UTF-8'>" +
             "<meta name='viewport' content='width=device-width,initial-scale=1'>" +
@@ -379,11 +398,14 @@ public class MainActivity extends Activity {
             ".card{background:"+card+";border-radius:20px;padding:40px 28px;text-align:center;max-width:320px;width:90%}" +
             "h2{font-size:20px;font-weight:700;color:"+txt+";margin:16px 0 8px}" +
             "p{font-size:14px;color:"+sub+";line-height:1.6;margin-bottom:24px}" +
-            "button{background:#1D9E75;color:#fff;border:none;border-radius:12px;padding:14px 32px;font-size:15px;width:100%;font-weight:600}" +
+            "button{background:#1D9E75;color:#fff;border:none;border-radius:12px;" +
+            "padding:14px 32px;font-size:15px;width:100%;font-weight:600}" +
             "</style></head><body>" +
             "<div class='card'><div style='font-size:48px'>📡</div>" +
-            "<h2>Sem conexão</h2><p>Verifique sua internet e tente novamente.</p>" +
-            "<button onclick='location.reload()'>Tentar novamente</button></div></body></html>",
+            "<h2>Sem conexão</h2>" +
+            "<p>Verifique sua internet e tente novamente.</p>" +
+            "<button onclick='location.reload()'>Tentar novamente</button>" +
+            "</div></body></html>",
             "text/html; charset=utf-8", "UTF-8"
         );
     }

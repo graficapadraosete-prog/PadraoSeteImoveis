@@ -165,9 +165,12 @@ public class UpdateChecker {
             };
 
             IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
+            // DOWNLOAD_COMPLETE é broadcast do sistema — requer RECEIVER_EXPORTED no Android 13+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                activity.registerReceiver(receiver, filter, Context.RECEIVER_NOT_EXPORTED);
+                activity.registerReceiver(receiver, filter,
+                    Context.RECEIVER_EXPORTED);
             } else {
+                // Android < 13: sem flag obrigatória
                 activity.registerReceiver(receiver, filter);
             }
 
@@ -210,8 +213,10 @@ public class UpdateChecker {
             File[] files = dir.listFiles();
             if (files == null) return;
             for (File f : files) {
-                if (f.getName().startsWith("Padrao7-") && f.getName().endsWith(".apk"))
-                    f.delete();
+                if (f.getName().startsWith("Padrao7-") && f.getName().endsWith(".apk")) {
+                    boolean deleted = f.delete();
+                    if (!deleted) f.deleteOnExit(); // fallback
+                }
             }
         } catch (Exception e) { /* ignore */ }
     }
