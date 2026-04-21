@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="#1D9E75">
 
-    <!-- Barra de progresso no topo -->
+    <!-- Barra de progresso logo abaixo da status bar -->
     <ProgressBar
         android:id="@+id/progress_bar"
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:layout_alignParentTop="true"
         android:max="100"
-        android:progressTint="#1D9E75"
+        android:progressTint="#FFFFFF"
         android:progressBackgroundTint="#0F6E56"
         android:elevation="2dp"
         android:visibility="gone" />
 
-    <!-- WebView ocupa tudo — a barra de nav vem do portal -->
+    <!-- WebView ocupa o restante — topbar do portal fica logo abaixo -->
     <WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/progress_bar" />
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
-</RelativeLayout>
+</LinearLayout>

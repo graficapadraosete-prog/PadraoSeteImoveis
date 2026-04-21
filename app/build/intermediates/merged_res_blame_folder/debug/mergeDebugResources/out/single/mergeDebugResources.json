@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "br.com.padrao7imoveis.app-debug-18:/xml_file_provider_paths.xml.flat",
+        "source": "br.com.padrao7imoveis.app-main-20:/xml/file_provider_paths.xml"
+    },
+    {
+        "merged": "br.com.padrao7imoveis.app-debug-18:/layout_activity_main.xml.flat",
+        "source": "br.com.padrao7imoveis.app-main-20:/layout/activity_main.xml"
+    },
+    {
+        "merged": "br.com.padrao7imoveis.app-debug-18:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "br.com.padrao7imoveis.app-main-20:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "br.com.padrao7imoveis.app-debug-18:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "br.com.padrao7imoveis.app-main-20:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "br.com.padrao7imoveis.app-debug-18:/drawable_btn_logout_bg.xml.flat",
+        "source": "br.com.padrao7imoveis.app-main-20:/drawable/btn_logout_bg.xml"
+    },
+    {
+        "merged": "br.com.padrao7imoveis.app-debug-18:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "br.com.padrao7imoveis.app-main-20:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "br.com.padrao7imoveis.app-debug-18:/xml_network_security_config.xml.flat",
+        "source": "br.com.padrao7imoveis.app-main-20:/xml/network_security_config.xml"
+    },
+    {
+        "merged": "br.com.padrao7imoveis.app-debug-18:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "br.com.padrao7imoveis.app-main-20:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "br.com.padrao7imoveis.app-debug-18:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "br.com.padrao7imoveis.app-main-20:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "br.com.padrao7imoveis.app-debug-18:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "br.com.padrao7imoveis.app-main-20:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "br.com.padrao7imoveis.app-debug-18:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "br.com.padrao7imoveis.app-main-20:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "br.com.padrao7imoveis.app-debug-18:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "br.com.padrao7imoveis.app-main-20:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "br.com.padrao7imoveis.app-debug-18:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "br.com.padrao7imoveis.app-main-20:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "br.com.padrao7imoveis.app-debug-18:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "br.com.padrao7imoveis.app-main-20:/mipmap-mdpi/ic_launcher.png"
+    }
+]

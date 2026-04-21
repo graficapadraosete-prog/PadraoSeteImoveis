@@ -52,6 +52,14 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Garantir que o conteúdo NÃO fique atrás da status bar
+        // O fundo verde da status bar combina com a topbar do portal
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(0xFF0F6E56); // verde escuro
+            getWindow().getDecorView().setSystemUiVisibility(0); // sem flags transparentes
+        }
+
         setContentView(R.layout.activity_main);
 
         webView     = findViewById(R.id.webview);

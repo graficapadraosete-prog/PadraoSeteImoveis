@@ -4,8 +4,10 @@
         <item name="android:colorPrimary">#1D9E75</item>
         <item name="android:colorPrimaryDark">#0F6E56</item>
         <item name="android:colorAccent">#1D9E75</item>
-        <item name="android:windowBackground">#F4F5F7</item>
+        <item name="android:windowBackground">#1D9E75</item>
         <item name="android:statusBarColor">#0F6E56</item>
         <item name="android:navigationBarColor">#FFFFFF</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:fitsSystemWindows">true</item>
     </style>
 </resources>
