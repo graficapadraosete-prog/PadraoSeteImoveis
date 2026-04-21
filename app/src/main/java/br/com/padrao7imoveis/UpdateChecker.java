@@ -23,9 +23,9 @@ import java.io.File;
 
 public class UpdateChecker {
 
-    // URL da API do GitHub Releases — troque pelo seu usuario/repositorio
-    private static final String GITHUB_API =
-        "https://api.github.com/repos/SEU_USUARIO/padrao7imoveis-app/releases/latest";
+    // URL do version.json no seu servidor
+    private static final String VERSION_URL =
+        "https://portal.padraosete.com.br/contrato/update/version.json";
 
     private final Activity activity;
     private final Handler  handler = new Handler(Looper.getMainLooper());
@@ -34,83 +34,71 @@ public class UpdateChecker {
         this.activity = activity;
     }
 
-    // Verificar atualizações em background
+    // Verificar em background (chamado no onCreate com delay)
     public void verificar() {
         new Thread(() -> {
             try {
-                String json = buscarJson(GITHUB_API);
-                if (json == null) return;
+                String json = buscarTexto(VERSION_URL + "?t=" + System.currentTimeMillis());
+                if (json == null || json.isEmpty()) return;
 
-                JSONObject release  = new JSONObject(json);
-                String tagRemota    = release.getString("tag_name");   // ex: "v2.1"
-                String notas        = release.optString("body", "");
-                String apkUrl       = "";
+                JSONObject d = new JSONObject(json);
 
-                // Pegar URL do APK nos assets do release
-                org.json.JSONArray assets = release.getJSONArray("assets");
-                for (int i = 0; i < assets.length(); i++) {
-                    JSONObject asset = assets.getJSONObject(i);
-                    String nome = asset.getString("name");
-                    if (nome.endsWith(".apk")) {
-                        apkUrl = asset.getString("browser_download_url");
-                        break;
-                    }
-                }
+                String versaoRemota = d.optString("versao", "0.0.0");
+                String apkUrl       = d.optString("apk_url", "");
+                String notas        = d.optString("notas", "");
+                boolean obrigatorio = d.optBoolean("obrigatorio", false);
 
-                // Versão instalada
-                String versaoAtual = obterVersaoAtual();
+                String versaoLocal = obterVersaoAtual();
 
-                // Comparar versões
-                if (!apkUrl.isEmpty() && !tagRemota.equals(versaoAtual)
-                    && isNova(tagRemota, versaoAtual)) {
+                if (!apkUrl.isEmpty() && isNova(versaoRemota, versaoLocal)) {
+                    final String url   = apkUrl;
+                    final String versao = versaoRemota;
+                    final String nota  = notas;
+                    final boolean obrig = obrigatorio;
 
-                    final String urlFinal  = apkUrl;
-                    final String tag       = tagRemota;
-                    final String notasFinal = notas;
-
-                    handler.post(() ->
-                        mostrarDialogo(tag, notasFinal, urlFinal)
-                    );
+                    handler.post(() -> mostrarDialogo(versao, nota, url, obrig));
                 }
 
             } catch (Exception e) {
-                // Silencioso — nao interromper o usuario se falhar
+                // Silencioso — nao interromper o usuario
             }
         }).start();
     }
 
-    // Mostrar diálogo de atualização disponível
-    private void mostrarDialogo(String versao, String notas, String apkUrl) {
+    // Diálogo de atualização disponível
+    private void mostrarDialogo(String versao, String notas,
+                                String apkUrl, boolean obrigatorio) {
         if (activity.isFinishing()) return;
 
-        String msg = "Nova versão disponível: " + versao;
+        String msg = "Versão " + versao + " disponível!";
         if (!notas.isEmpty()) {
-            // Limitar notas a 200 chars
-            String notasCurtas = notas.length() > 200
-                ? notas.substring(0, 200) + "..."
-                : notas;
-            msg += "\n\nO que há de novo:\n" + notasCurtas;
+            msg += "\n\nO que há de novo:\n" + notas;
+        }
+        if (obrigatorio) {
+            msg += "\n\n⚠ Esta atualização é obrigatória.";
         }
 
-        new AlertDialog.Builder(activity)
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity)
             .setTitle("Atualização disponível")
             .setMessage(msg)
-            .setCancelable(false)
-            .setPositiveButton("Atualizar agora", (d, w) ->
-                baixarEInstalar(apkUrl, versao)
-            )
-            .setNegativeButton("Agora não", null)
-            .show();
+            .setCancelable(!obrigatorio)
+            .setPositiveButton("Atualizar agora", (d, w) -> baixar(apkUrl, versao));
+
+        if (!obrigatorio) {
+            builder.setNegativeButton("Agora não", null);
+        }
+
+        builder.show();
     }
 
-    // Baixar APK e instalar
-    private void baixarEInstalar(String url, String versao) {
+    // Baixar o APK usando DownloadManager
+    private void baixar(String url, String versao) {
         try {
-            String nomeArquivo = "padrao7-" + versao + ".apk";
+            String nomeArquivo = "Padrao7-" + versao + ".apk";
 
             DownloadManager.Request req = new DownloadManager.Request(Uri.parse(url));
-            req.setTitle("Atualizando Padrão 7 Imóveis");
-            req.setDescription("Baixando versão " + versao + "...");
+            req.setTitle("Padrão 7 Imóveis — v" + versao);
+            req.setDescription("Baixando atualização...");
             req.setNotificationVisibility(
                 DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
             req.setDestinationInExternalPublicDir(
@@ -121,118 +109,99 @@ public class UpdateChecker {
                 activity.getSystemService(Context.DOWNLOAD_SERVICE);
             long downloadId = dm.enqueue(req);
 
-            // Listener para quando terminar o download
-            BroadcastReceiver onComplete = new BroadcastReceiver() {
+            BroadcastReceiver receiver = new BroadcastReceiver() {
                 @Override
                 public void onReceive(Context ctx, Intent intent) {
                     long id = intent.getLongExtra(
                         DownloadManager.EXTRA_DOWNLOAD_ID, -1);
                     if (id == downloadId) {
-                        instalarApk(nomeArquivo);
+                        instalar(nomeArquivo);
                         activity.unregisterReceiver(this);
                     }
                 }
             };
-
-            activity.registerReceiver(onComplete,
+            activity.registerReceiver(receiver,
                 new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
 
         } catch (Exception e) {
             // Fallback: abrir no browser
-            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-            activity.startActivity(i);
+            activity.startActivity(
+                new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
         }
     }
 
     // Instalar o APK baixado
-    private void instalarApk(String nomeArquivo) {
-        File apkFile = new File(
+    private void instalar(String nomeArquivo) {
+        File apk = new File(
             Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_DOWNLOADS), nomeArquivo);
+        if (!apk.exists()) return;
 
-        if (!apkFile.exists()) return;
-
-        Intent install = new Intent(Intent.ACTION_VIEW);
-
+        Intent intent = new Intent(Intent.ACTION_VIEW);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            // Android 7+ usa FileProvider
             Uri uri = FileProvider.getUriForFile(
-                activity,
-                activity.getPackageName() + ".provider",
-                apkFile);
-            install.setDataAndType(uri,
-                "application/vnd.android.package-archive");
-            install.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                activity, activity.getPackageName() + ".provider", apk);
+            intent.setDataAndType(uri, "application/vnd.android.package-archive");
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         } else {
-            install.setDataAndType(Uri.fromFile(apkFile),
+            intent.setDataAndType(Uri.fromFile(apk),
                 "application/vnd.android.package-archive");
         }
-
-        install.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        activity.startActivity(install);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        activity.startActivity(intent);
     }
 
-    // Buscar JSON da API GitHub
-    private String buscarJson(String urlStr) {
+    // Buscar texto de uma URL
+    private String buscarTexto(String urlStr) {
         try {
             URL url = new URL(urlStr);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
-            conn.setConnectTimeout(10000);
-            conn.setReadTimeout(10000);
-            conn.setRequestProperty("Accept", "application/vnd.github.v3+json");
+            conn.setConnectTimeout(8000);
+            conn.setReadTimeout(8000);
+            conn.setRequestProperty("Cache-Control", "no-cache");
             conn.setRequestProperty("User-Agent", "Padrao7ImoveisApp");
-
             if (conn.getResponseCode() != 200) return null;
-
             BufferedReader br = new BufferedReader(
                 new InputStreamReader(conn.getInputStream()));
             StringBuilder sb = new StringBuilder();
             String line;
             while ((line = br.readLine()) != null) sb.append(line);
-            br.close();
-            conn.disconnect();
+            br.close(); conn.disconnect();
             return sb.toString();
-        } catch (Exception e) {
-            return null;
-        }
+        } catch (Exception e) { return null; }
     }
 
-    // Obter versão atual instalada
+    // Versão instalada no celular
     private String obterVersaoAtual() {
         try {
-            return "v" + activity.getPackageManager()
-                .getPackageInfo(activity.getPackageName(), 0)
-                .versionName;
+            return activity.getPackageManager()
+                .getPackageInfo(activity.getPackageName(), 0).versionName;
         } catch (PackageManager.NameNotFoundException e) {
-            return "v0.0.0";
+            return "0.0.0";
         }
     }
 
-    // Comparar se a versão remota é mais nova
-    // Formato esperado: "v2.1.0" ou "2.1.0"
+    // Comparar se versão remota é mais nova
+    // Ex: "2.2.0" > "2.1.0" → true
     private boolean isNova(String remota, String local) {
         try {
-            int[] r = parseVersao(remota);
-            int[] l = parseVersao(local);
+            int[] r = parse(remota);
+            int[] l = parse(local);
             for (int i = 0; i < 3; i++) {
                 if (r[i] > l[i]) return true;
                 if (r[i] < l[i]) return false;
             }
             return false;
-        } catch (Exception e) {
-            return false;
-        }
+        } catch (Exception e) { return false; }
     }
 
-    private int[] parseVersao(String v) {
-        v = v.replaceAll("[^0-9.]", "");
-        String[] partes = v.split("\\.");
-        int[] nums = new int[3];
-        for (int i = 0; i < Math.min(partes.length, 3); i++) {
-            try { nums[i] = Integer.parseInt(partes[i]); }
-            catch (Exception e) { nums[i] = 0; }
+    private int[] parse(String v) {
+        String[] p = v.replaceAll("[^0-9.]", "").split("\\.");
+        int[] n = new int[3];
+        for (int i = 0; i < Math.min(p.length, 3); i++) {
+            try { n[i] = Integer.parseInt(p[i]); } catch (Exception e) { n[i] = 0; }
         }
-        return nums;
+        return n;
     }
 }
