@@ -1,0 +1,25 @@
+R_DEF: Internal format may change without notice
+local
+color branco
+color fundo_claro
+color fundo_escuro
+color texto_claro
+color texto_escuro
+color verde_claro
+color verde_escuro
+color verde_padrao
+drawable btn_logout_bg
+id app_title
+id btn_logout
+id progress_bar
+id top_bar
+id webview
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string sair_msg
+string sair_titulo
+style AppTheme
+xml file_provider_paths
+xml network_security_config

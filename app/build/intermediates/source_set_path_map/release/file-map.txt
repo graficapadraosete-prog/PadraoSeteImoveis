@@ -1,0 +1,10 @@
+br.com.padrao7imoveis.app-jetified-annotation-experimental-1.3.0-0 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\2d8a610719c086ad8d2a7b81fb08630a\transformed\jetified-annotation-experimental-1.3.0\res
+br.com.padrao7imoveis.app-lifecycle-runtime-2.3.1-1 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\5aa68f15647158a1ef2279d74a051250\transformed\lifecycle-runtime-2.3.1\res
+br.com.padrao7imoveis.app-core-1.12.0-2 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\res
+br.com.padrao7imoveis.app-pngs-3 C:\appimoveis\PadraoSeteImoveis\app\build\generated\res\pngs\release
+br.com.padrao7imoveis.app-resValues-4 C:\appimoveis\PadraoSeteImoveis\app\build\generated\res\resValues\release
+br.com.padrao7imoveis.app-packageReleaseResources-5 C:\appimoveis\PadraoSeteImoveis\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
+br.com.padrao7imoveis.app-packageReleaseResources-6 C:\appimoveis\PadraoSeteImoveis\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
+br.com.padrao7imoveis.app-merged_res-7 C:\appimoveis\PadraoSeteImoveis\app\build\intermediates\merged_res\release
+br.com.padrao7imoveis.app-main-8 C:\appimoveis\PadraoSeteImoveis\app\src\main\res
+br.com.padrao7imoveis.app-release-9 C:\appimoveis\PadraoSeteImoveis\app\src\release\res

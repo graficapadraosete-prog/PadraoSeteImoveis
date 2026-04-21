@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "br.com.padrao7imoveis.app-mergeReleaseResources-5:/values-kn/values-kn.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\caches\\transforms-3\\606cc34df7cdbd73aa5e87d0916f75fd\\transformed\\core-1.12.0\\res\\values-kn\\values-kn.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,256,357,463,564,672,800",
+                        "endColumns": "97,102,100,105,100,107,127,100",
+                        "endOffsets": "148,251,352,458,559,667,795,896"
+                    }
+                }
+            ]
+        }
+    ]
+}

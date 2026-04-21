@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="branco">#FFFFFF</color>
+    <color name="fundo_claro">#F4F5F7</color>
+    <color name="fundo_escuro">#121212</color>
+    <color name="texto_claro">#FFFFFF</color>
+    <color name="texto_escuro">#111111</color>
+    <color name="verde_claro">#E1F5EE</color>
+    <color name="verde_escuro">#0F6E56</color>
+    <color name="verde_padrao">#1D9E75</color>
+    <string name="app_name">Padrao 7 Imoveis</string>
+    <string name="sair_msg">Deseja sair do Padrao 7 Imoveis?</string>
+    <string name="sair_titulo">Sair do app</string>
+    <style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorPrimary">#1D9E75</item>
+        <item name="android:colorPrimaryDark">#0F6E56</item>
+        <item name="android:colorAccent">#1D9E75</item>
+        <item name="android:windowBackground">#F4F5F7</item>
+        <item name="android:statusBarColor">#0F6E56</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
+    </style>
+</resources>
