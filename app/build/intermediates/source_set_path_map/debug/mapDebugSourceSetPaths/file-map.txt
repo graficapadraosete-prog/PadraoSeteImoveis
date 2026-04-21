@@ -1,0 +1,24 @@
+br.com.padrao7imoveis.app-pngs-0 C:\PadraoSeteAppV2\app\build\generated\res\pngs\debug
+br.com.padrao7imoveis.app-resValues-1 C:\PadraoSeteAppV2\app\build\generated\res\resValues\debug
+br.com.padrao7imoveis.app-updated_navigation_xml-2 C:\PadraoSeteAppV2\app\build\generated\updated_navigation_xml\debug
+br.com.padrao7imoveis.app-packageDebugResources-3 C:\PadraoSeteAppV2\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+br.com.padrao7imoveis.app-packageDebugResources-4 C:\PadraoSeteAppV2\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+br.com.padrao7imoveis.app-debug-5 C:\PadraoSeteAppV2\app\build\intermediates\merged_res\debug\mergeDebugResources
+br.com.padrao7imoveis.app-debug-6 C:\PadraoSeteAppV2\app\src\debug\res
+br.com.padrao7imoveis.app-main-7 C:\PadraoSeteAppV2\app\src\main\res
+br.com.padrao7imoveis.app-jetified-lifecycle-process-2.4.1-8 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\8.13\transforms\05a760018b8756e5ee58e46c75d597cc\transformed\jetified-lifecycle-process-2.4.1\res
+br.com.padrao7imoveis.app-jetified-emoji2-1.2.0-9 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\8.13\transforms\30d87ef16e7fc46a028848470090422c\transformed\jetified-emoji2-1.2.0\res
+br.com.padrao7imoveis.app-lifecycle-runtime-2.5.1-10 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\8.13\transforms\3a0bbc02c5b00aa165b3bdcb607ea754\transformed\lifecycle-runtime-2.5.1\res
+br.com.padrao7imoveis.app-jetified-startup-runtime-1.1.1-11 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\8.13\transforms\3ff255d99ec404d7bf32e05bbd2da197\transformed\jetified-startup-runtime-1.1.1\res
+br.com.padrao7imoveis.app-jetified-savedstate-1.2.0-12 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\8.13\transforms\411265afdba6699e56529b5bdfe674c0\transformed\jetified-savedstate-1.2.0\res
+br.com.padrao7imoveis.app-fragment-1.3.6-13 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\8.13\transforms\58d97f6e2a194420a46c05982e1df9cd\transformed\fragment-1.3.6\res
+br.com.padrao7imoveis.app-jetified-activity-1.6.0-14 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\8.13\transforms\60d4a88079990ebd8224e61c745046ec\transformed\jetified-activity-1.6.0\res
+br.com.padrao7imoveis.app-jetified-annotation-experimental-1.3.0-15 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\8.13\transforms\7f0b9680aee2e07d2368d6ff98286327\transformed\jetified-annotation-experimental-1.3.0\res
+br.com.padrao7imoveis.app-jetified-emoji2-views-helper-1.2.0-16 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\8.13\transforms\805c45838d2411bf37a199916a350f14\transformed\jetified-emoji2-views-helper-1.2.0\res
+br.com.padrao7imoveis.app-appcompat-1.6.1-17 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\8.13\transforms\878905728e32d0cb49c28b5414738288\transformed\appcompat-1.6.1\res
+br.com.padrao7imoveis.app-jetified-lifecycle-viewmodel-savedstate-2.5.1-18 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\8.13\transforms\89babee0ae191b593759c1350d56779c\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\res
+br.com.padrao7imoveis.app-lifecycle-viewmodel-2.5.1-19 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\8.13\transforms\91cdae32d2ab3ecc3988c176fd8e251e\transformed\lifecycle-viewmodel-2.5.1\res
+br.com.padrao7imoveis.app-jetified-core-ktx-1.9.0-20 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\8.13\transforms\bc9fb71818bea4c7f7e5bc7ec11840b5\transformed\jetified-core-ktx-1.9.0\res
+br.com.padrao7imoveis.app-core-1.9.0-21 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\8.13\transforms\f3a2c6a0938b42aa4b2fb81490e9506c\transformed\core-1.9.0\res
+br.com.padrao7imoveis.app-jetified-appcompat-resources-1.6.1-22 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\8.13\transforms\fa76542002ce539279fff8cbc16ba55c\transformed\jetified-appcompat-resources-1.6.1\res
+br.com.padrao7imoveis.app-lifecycle-livedata-core-2.5.1-23 C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\8.13\transforms\fc6fdf2350eb721caf37646edc9018c1\transformed\lifecycle-livedata-core-2.5.1\res

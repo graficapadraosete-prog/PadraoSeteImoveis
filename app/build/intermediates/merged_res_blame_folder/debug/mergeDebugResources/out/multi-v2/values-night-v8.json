@@ -1,0 +1,62 @@
+{
+    "logs": [
+        {
+            "outputFile": "br.com.padrao7imoveis.app-mergeDebugResources-2:/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\caches\\8.13\\transforms\\878905728e32d0cb49c28b5414738288\\transformed\\appcompat-1.6.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
+                    },
+                    "to": {
+                        "startLines": "13,14,15,16,17,18,19,20",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "660,730,814,898,994,1096,1198,1292",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "725,809,893,989,1091,1193,1287,1376"
+                    }
+                },
+                {
+                    "source": "C:\\PadraoSeteAppV2\\app\\src\\main\\res\\values-night\\colors.xml",
+                    "from": {
+                        "startLines": "3,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "101,55",
+                        "endColumns": "40,45",
+                        "endOffsets": "137,96"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,96",
+                        "endColumns": "40,45",
+                        "endOffsets": "91,137"
+                    }
+                },
+                {
+                    "source": "C:\\PadraoSeteAppV2\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "85",
+                        "endLines": "11",
+                        "endColumns": "12",
+                        "endOffsets": "598"
+                    },
+                    "to": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "142",
+                        "endLines": "12",
+                        "endColumns": "12",
+                        "endOffsets": "655"
+                    }
+                }
+            ]
+        }
+    ]
+}

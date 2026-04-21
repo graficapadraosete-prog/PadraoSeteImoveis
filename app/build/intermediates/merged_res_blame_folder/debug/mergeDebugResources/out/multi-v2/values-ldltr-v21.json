@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "br.com.padrao7imoveis.app-mergeDebugResources-2:/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\caches\\8.13\\transforms\\878905728e32d0cb49c28b5414738288\\transformed\\appcompat-1.6.1\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        }
+    ]
+}

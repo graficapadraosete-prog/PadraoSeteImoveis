@@ -1,0 +1,4 @@
+br.com.padrao7imoveis.test.app-androidTest-0 C:\PadraoSeteAppV2\app\build\generated\res\resValues\androidTest\debug
+br.com.padrao7imoveis.test.app-mergeDebugAndroidTestResources-1 C:\PadraoSeteAppV2\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+br.com.padrao7imoveis.test.app-mergeDebugAndroidTestResources-2 C:\PadraoSeteAppV2\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+br.com.padrao7imoveis.test.app-merged_res-3 C:\PadraoSeteAppV2\app\build\intermediates\merged_res\debugAndroidTest

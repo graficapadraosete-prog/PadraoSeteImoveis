@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "br.com.padrao7imoveis.app-mergeDebugResources-2:/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\caches\\8.13\\transforms\\878905728e32d0cb49c28b5414738288\\transformed\\appcompat-1.6.1\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        }
+    ]
+}

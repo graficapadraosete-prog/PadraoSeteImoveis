@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Padrao 7 Imoveis</string>
+    <string name="sair_titulo">Sair do app</string>
+    <string name="sair_msg">Deseja sair do Padrao 7 Imoveis?</string>
+</resources>

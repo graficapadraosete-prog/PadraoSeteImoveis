@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "br.com.padrao7imoveis.app-merged_res-4:/drawable_btn_logout_bg.xml.flat",
+        "source": "br.com.padrao7imoveis.app-main-6:/drawable/btn_logout_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-merged_res-4:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-main-6:\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-merged_res-4:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-main-6:\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "br.com.padrao7imoveis.app-merged_res-4:/layout_activity_main.xml.flat",
+        "source": "br.com.padrao7imoveis.app-main-6:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-merged_res-4:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-main-6:\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-merged_res-4:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-main-6:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-merged_res-4:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-main-6:\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-merged_res-4:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-main-6:\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-merged_res-4:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-main-6:\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-merged_res-4:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-main-6:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-merged_res-4:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-main-6:\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-merged_res-4:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-main-6:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-merged_res-4:\\xml_network_security_config.xml.flat",
+        "source": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-main-6:\\xml\\network_security_config.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-merged_res-4:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Gráfica Padrão 7 - 1\\.gradle\\daemon\\8.4\\br.com.padrao7imoveis.app-main-6:\\mipmap-xxhdpi\\ic_launcher.png"
+    }
+]

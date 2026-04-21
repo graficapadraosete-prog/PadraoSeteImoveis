@@ -1,0 +1,36 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'br.com.padrao7imoveis'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "br.com.padrao7imoveis"
+        minSdk 21
+        targetSdk 34
+        versionCode 3
+        versionName "2.1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
+        }
+        debug {
+            debuggable true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    // FileProvider para instalar APK no Android 7+
+    implementation 'androidx.core:core:1.12.0'
+}
