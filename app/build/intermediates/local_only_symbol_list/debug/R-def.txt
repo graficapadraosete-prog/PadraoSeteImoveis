@@ -9,10 +9,7 @@ color verde_claro
 color verde_escuro
 color verde_padrao
 drawable btn_logout_bg
-id app_title
-id btn_logout
 id progress_bar
-id top_bar
 id webview
 layout activity_main
 mipmap ic_launcher

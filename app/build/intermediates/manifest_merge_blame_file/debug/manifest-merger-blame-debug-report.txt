@@ -1,8 +1,8 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="br.com.padrao7imoveis"
-4    android:versionCode="3"
-5    android:versionName="2.1.0" >
+4    android:versionCode="5"
+5    android:versionName="3.0.0" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
@@ -14,97 +14,81 @@
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 12-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:6:5-79
 12-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:6:22-76
-13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-13-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:7:5-76
-13-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:7:22-73
-14    <uses-permission
-14-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:8:5-9:38
-15        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-15-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:8:22-78
-16        android:maxSdkVersion="28" />
-16-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:9:9-35
-17    <uses-permission
-17-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:10:5-11:38
-18        android:name="android.permission.READ_EXTERNAL_STORAGE"
-18-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:10:22-77
-19        android:maxSdkVersion="32" />
-19-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:11:9-35
-20    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-20-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:12:5-83
-20-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:12:22-80
-21
-22    <permission
-22-->[androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
-23        android:name="br.com.padrao7imoveis.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-23-->[androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
-24        android:protectionLevel="signature" />
-24-->[androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
-25
-26    <uses-permission android:name="br.com.padrao7imoveis.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-26-->[androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
-26-->[androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
-27
-28    <application
-28-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:14:5-46:19
-29        android:allowBackup="true"
-29-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:15:9-35
-30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-30-->[androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
-31        android:debuggable="true"
-32        android:extractNativeLibs="true"
-33        android:icon="@mipmap/ic_launcher"
-33-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:16:9-43
-34        android:label="@string/app_name"
-34-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:17:9-41
-35        android:networkSecurityConfig="@xml/network_security_config"
-35-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:22:9-69
-36        android:roundIcon="@mipmap/ic_launcher_round"
-36-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:18:9-54
-37        android:supportsRtl="false"
-37-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:19:9-36
-38        android:theme="@style/AppTheme"
-38-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:21:9-40
-39        android:usesCleartextTraffic="false" >
-39-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:20:9-45
-40        <activity
-40-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:24:9-33:20
-41            android:name="br.com.padrao7imoveis.MainActivity"
-41-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:25:13-41
-42            android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
-42-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:27:13-81
-43            android:exported="true"
-43-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:26:13-36
-44            android:windowSoftInputMode="adjustResize" >
-44-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:28:13-55
-45            <intent-filter>
-45-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:29:13-32:29
-46                <action android:name="android.intent.action.MAIN" />
-46-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:30:17-69
-46-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:30:25-66
-47
-48                <category android:name="android.intent.category.LAUNCHER" />
-48-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:31:17-77
-48-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:31:27-74
-49            </intent-filter>
-50        </activity>
-51
-52        <!-- FileProvider para instalar APK no Android 7+ -->
-53        <provider
-54            android:name="androidx.core.content.FileProvider"
-54-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:37:13-62
-55            android:authorities="br.com.padrao7imoveis.provider"
-55-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:38:13-60
-56            android:exported="false"
-56-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:39:13-37
-57            android:grantUriPermissions="true" >
-57-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:40:13-47
-58            <meta-data
-58-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:41:13-43:63
-59                android:name="android.support.FILE_PROVIDER_PATHS"
-59-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:42:17-67
-60                android:resource="@xml/file_provider_paths" />
-60-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:43:17-60
-61        </provider>
-62    </application>
-63
-64</manifest>
+13    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+13-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:7:5-83
+13-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:7:22-80
+14
+15    <permission
+15-->[androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+16        android:name="br.com.padrao7imoveis.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+16-->[androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+17        android:protectionLevel="signature" />
+17-->[androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+18
+19    <uses-permission android:name="br.com.padrao7imoveis.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+19-->[androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+19-->[androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+20
+21    <application
+21-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:9:5-40:19
+22        android:allowBackup="true"
+22-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:10:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+24        android:debuggable="true"
+25        android:extractNativeLibs="true"
+26        android:icon="@mipmap/ic_launcher"
+26-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:11:9-43
+27        android:label="@string/app_name"
+27-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:12:9-41
+28        android:networkSecurityConfig="@xml/network_security_config"
+28-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:17:9-69
+29        android:roundIcon="@mipmap/ic_launcher_round"
+29-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:13:9-54
+30        android:supportsRtl="false"
+30-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:14:9-36
+31        android:theme="@style/AppTheme"
+31-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:16:9-40
+32        android:usesCleartextTraffic="false" >
+32-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:15:9-45
+33        <activity
+33-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:19:9-28:20
+34            android:name="br.com.padrao7imoveis.MainActivity"
+34-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:20:13-41
+35            android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
+35-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:22:13-81
+36            android:exported="true"
+36-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:21:13-36
+37            android:windowSoftInputMode="adjustResize" >
+37-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:23:13-55
+38            <intent-filter>
+38-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:24:13-27:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:25:17-69
+39-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:25:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:26:17-77
+41-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:26:27-74
+42            </intent-filter>
+43        </activity>
+44
+45        <provider
+46            android:name="androidx.core.content.FileProvider"
+46-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:31:13-62
+47            android:authorities="br.com.padrao7imoveis.provider"
+47-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:32:13-60
+48            android:exported="false"
+48-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:33:13-37
+49            android:grantUriPermissions="true" >
+49-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:34:13-47
+50            <meta-data
+50-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:35:13-37:63
+51                android:name="android.support.FILE_PROVIDER_PATHS"
+51-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:36:17-67
+52                android:resource="@xml/file_provider_paths" />
+52-->C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:37:17-60
+53        </provider>
+54    </application>
+55
+56</manifest>

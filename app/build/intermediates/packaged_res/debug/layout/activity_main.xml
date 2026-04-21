@@ -5,55 +5,20 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
-    <!-- Barra superior com botão de sair -->
-    <RelativeLayout
-        android:id="@+id/top_bar"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_alignParentTop="true"
-        android:background="#0F6E56"
-        android:paddingStart="16dp"
-        android:paddingEnd="12dp"
-        android:elevation="4dp">
-
-        <TextView
-            android:id="@+id/app_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:text="Padrão 7 Imóveis"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btn_logout"
-            android:layout_width="wrap_content"
-            android:layout_height="36dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:text="Sair"
-            android:textColor="#FFFFFF"
-            android:textSize="13sp"
-            android:background="@drawable/btn_logout_bg"
-            android:paddingStart="14dp"
-            android:paddingEnd="14dp" />
-    </RelativeLayout>
-
-    <!-- Barra de progresso -->
+    <!-- Barra de progresso no topo -->
     <ProgressBar
         android:id="@+id/progress_bar"
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:layout_below="@id/top_bar"
+        android:layout_alignParentTop="true"
         android:max="100"
         android:progressTint="#1D9E75"
-        android:progressBackgroundTint="#E1F5EE"
+        android:progressBackgroundTint="#0F6E56"
         android:elevation="2dp"
         android:visibility="gone" />
 
-    <!-- WebView principal -->
+    <!-- WebView ocupa tudo — a barra de nav vem do portal -->
     <WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"

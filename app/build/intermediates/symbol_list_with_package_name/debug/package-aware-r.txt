@@ -110,10 +110,8 @@ id action_divider
 id action_image
 id action_text
 id actions
-id app_title
 id async
 id blocking
-id btn_logout
 id chronometer
 id dialog_button
 id edit_text_id
@@ -149,7 +147,6 @@ id text
 id text2
 id time
 id title
-id top_bar
 id view_tree_lifecycle_owner
 id webview
 integer status_bar_notification_info_maxnum

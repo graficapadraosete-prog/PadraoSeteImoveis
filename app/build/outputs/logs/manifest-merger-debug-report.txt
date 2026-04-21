@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:36:9-44:20
+INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:30:9-38:20
 	android:grantUriPermissions
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:40:13-47
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:34:13-47
 	android:authorities
 		INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:38:13-60
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:32:13-60
 	android:exported
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:39:13-37
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:33:13-37
 	android:name
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:37:13-62
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:31:13-62
 manifest
-ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:2:1-48:12
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:2:1-41:12
 MERGED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\0c857eaa378e1c798341155dbc28d9bd\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\6b9bb6a8c71662ca631e197a9e065197\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -38,29 +38,13 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:6:5-79
 	android:name
 		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:6:22-76
-uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:7:5-76
-	android:name
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:7:22-73
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:8:5-9:38
-	android:maxSdkVersion
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:9:9-35
-	android:name
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:8:22-78
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:10:5-11:38
-	android:maxSdkVersion
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:11:9-35
-	android:name
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:10:22-77
 uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
-ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:12:5-83
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:7:5-83
 	android:name
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:12:22-80
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:7:22-80
 application
-ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:14:5-46:19
-INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:14:5-46:19
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:9:5-40:19
+INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:9:5-40:19
 MERGED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
 MERGED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\0c857eaa378e1c798341155dbc28d9bd\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
@@ -70,47 +54,47 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Gr
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] C:\Users\Gráfica Padrão 7 - 1\.gradle\caches\transforms-3\606cc34df7cdbd73aa5e87d0916f75fd\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:19:9-36
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:14:9-36
 	android:label
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:17:9-41
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:12:9-41
 	android:roundIcon
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:18:9-54
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:13:9-54
 	android:icon
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:16:9-43
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:21:9-40
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:16:9-40
 	android:networkSecurityConfig
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:22:9-69
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:17:9-69
 	android:usesCleartextTraffic
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:20:9-45
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:15:9-45
 activity#br.com.padrao7imoveis.MainActivity
-ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:24:9-33:20
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:19:9-28:20
 	android:windowSoftInputMode
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:28:13-55
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:23:13-55
 	android:exported
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:26:13-36
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:21:13-36
 	android:configChanges
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:27:13-81
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:22:13-81
 	android:name
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:25:13-41
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:20:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:29:13-32:29
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:24:13-27:29
 action#android.intent.action.MAIN
-ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:30:17-69
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:30:25-66
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:31:17-77
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:31:27-74
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:26:27-74
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:41:13-43:63
+ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:35:13-37:63
 	android:resource
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:43:17-60
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:37:17-60
 	android:name
-		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:42:17-67
+		ADDED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml:36:17-67
 uses-sdk
 INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\appimoveis\PadraoSeteImoveis\app\src\main\AndroidManifest.xml

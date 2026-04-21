@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.padrao7imoveis"
-    android:versionCode="3"
-    android:versionName="2.1.0" >
+    android:versionCode="5"
+    android:versionName="3.0.0" >
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -10,13 +10,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="28" />
-    <uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <permission
@@ -49,7 +42,6 @@
             </intent-filter>
         </activity>
 
-        <!-- FileProvider para instalar APK no Android 7+ -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="br.com.padrao7imoveis.provider"
